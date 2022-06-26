@@ -1,4 +1,4 @@
-1. get git access token, use to pull repo
+1. get git access token, use to pull repo, update (remote set-url) origin to include token
 2. install docker
 	> curl -fsSL https://get.docker/com -o get-docker.sh
 	> sudo sh get-docker.sh
