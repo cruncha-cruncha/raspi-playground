@@ -19,7 +19,6 @@ fi
 TZ="Canada/Eastern"
 PASSWORD="salmonslippers"
 IP_ADDR=$(ifconfig | awk '/net / { x = $2 } END { print x }')
-ADMIN_PORT="8081"
 
 # fancy awk didn't work with ethernet
 IP_ADDR="192.168.2.99"
@@ -41,7 +40,7 @@ docker run -d \
 -e SERVERIP=$IP_ADDR \
 -v pihole:/etc/pihole \
 -v dnsmasq:/etc/dnsmasq \
--p $ADMIN_PORT:80 \
+-p 80:80 \
 -p 53:53/tcp \
 -p 53:53/udp \
 --restart=unless-stopped \
