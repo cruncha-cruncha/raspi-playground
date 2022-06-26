@@ -21,6 +21,9 @@ PASSWORD="salmonslippers"
 IP_ADDR=$(ifconfig | awk '/net / { x = $2 } END { print x }')
 ADMIN_PORT="8081"
 
+# fancy awk didn't work with ethernet
+IP_ADDR="192.168.2.99"
+
 read -p "Continue? " yn
 case $yn in
     [Yy]* ) break;;
