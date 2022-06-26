@@ -6,12 +6,12 @@
 set -x
 
 # volume for application configuration data
-if ! docker volume create pihole then
+if ! docker volume create pihole; then
     exit 1
 fi
 
 # volume for DNS configuration
-if ! docker volumne create dnsmasq then
+if ! docker volume create dnsmasq; then
     exit 1
 fi
 
