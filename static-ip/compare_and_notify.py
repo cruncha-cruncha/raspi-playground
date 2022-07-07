@@ -25,10 +25,10 @@ def handle_change(new_ip_addr):
     send_message_to_self("New Public IP Addr", new_ip_addr)
     pass
 
-def overwrite_file(f_stable, text):
-    f_stable.seek(0)
-    f_stable.truncate()
-    f_stable.write(text + "\n")
+def overwrite_file(f, text):
+    f.seek(0)
+    f.truncate()
+    f.write(text + "\n")
 
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
