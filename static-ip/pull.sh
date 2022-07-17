@@ -2,4 +2,4 @@
 
 cd $(dirname "$0")
 
-curl https://icanhazip.com/ >> latest.txt
+curl https://icanhazip.com/ > latest.txt
